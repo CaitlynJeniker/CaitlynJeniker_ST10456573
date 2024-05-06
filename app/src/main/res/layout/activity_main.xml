@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C4AADD"
+    android:background="@drawable/web_photo_editor"
     tools:context=".MainActivity">
 
     <TextView
@@ -18,10 +18,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/doggy"
         android:layout_width="359dp"
         android:layout_height="328dp"
-        android:src="@tools:sample/avatars"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,10 +36,11 @@
         android:layout_marginTop="80dp"
         android:layout_marginBottom="100dp"
         android:text="Get Started!"
+        android:backgroundTint="@color/pink"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/doggy"
         app:layout_constraintVertical_bias="0.25" />
 
     <TextView

@@ -4,39 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C4AADD"
+    android:background="@drawable/web_photo_editor"
     tools:context=".secondPage">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/FeedBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="40dp"
+        android:backgroundTint="@color/pink"
         android:text="FEED"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/doggy" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/CleanBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:backgroundTint="@color/pink"
         android:text="CLEAN"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/PlayBtn"
         app:layout_constraintHorizontal_bias="0.563"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintStart_toEndOf="@+id/FeedBtn"
+        app:layout_constraintTop_toBottomOf="@+id/doggy" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/PlayBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/pink"
         android:text="PLAY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/doggy" />
 
     <TextView
         android:id="@+id/textView2"
@@ -44,9 +47,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="60dp"
+        android:background="@color/blue"
         android:text="Hunger"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/FeedBtn" />
 
     <TextView
         android:id="@+id/textView3"
@@ -54,7 +60,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="30dp"
+        android:background="@color/blue"
         android:text="Clean"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -64,44 +73,62 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="30dp"
+        android:background="@color/blue"
         android:text="Happy"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/doggy"
         android:layout_width="378dp"
         android:layout_height="275dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083"
+        app:layout_constraintVertical_bias="0.082"
         app:srcCompat="@drawable/puppy" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="270dp"
-        tools:layout_editor_absoluteY="461dp" />
+        android:id="@+id/feedCount"
+        android:layout_width="67dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="72dp"
+        android:backgroundTint="@color/pink"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/cleanCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlayBtn" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="270dp"
-        tools:layout_editor_absoluteY="510dp" />
+        android:id="@+id/cleanCount"
+        android:layout_width="61dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="84dp"
+        android:backgroundTint="@color/pink"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.981"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/feedCount" />
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="270dp"
-        tools:layout_editor_absoluteY="560dp" />
+        android:id="@+id/playCount"
+        android:layout_width="66dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="152dp"
+        android:backgroundTint="@color/pink"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cleanCount"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
